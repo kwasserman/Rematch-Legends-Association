@@ -1,7 +1,10 @@
-
 import discord
+from dotenv import load_dotenv
 from discord.ext import commands
 import os
+
+
+load_dotenv()
 
 
 
@@ -28,6 +31,7 @@ class MyBot(commands.Bot):
 bot = MyBot()
 token = os.getenv('DISCORD_TOKEN')
 if token is None:
+    # Make sure to install python-dotenv if you want to load environment variables from a .env file
     raise ValueError("DISCORD_TOKEN environment variable is not set")
 bot.run(token)
 
