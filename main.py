@@ -1,7 +1,7 @@
 
 import discord
 from discord.ext import commands
-import config
+import os
 
 
 
@@ -22,9 +22,12 @@ class MyBot(commands.Bot):
        await self.tree.sync()
        print('Commands synced successfully! globally')
 
-       async def on_ready(self):
-             print(f'Rematch League System is Online!! Logged in as {self.user} (ID: {self.user.id})')
+    async def on_ready(self):
+        print(f'Rematch League System is Online!! Logged in as {self.user} (ID: {self.user.id})')
         
 bot = MyBot()
-bot.run(config.TOKEN)
+token = os.getenv('DISCORD_TOKEN')
+if token is None:
+    raise ValueError("DISCORD_TOKEN environment variable is not set")
+bot.run(token)
 
