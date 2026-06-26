@@ -36,4 +36,4 @@ jobs:
         # Pulls the token securely from your GitHub Secrets vault
         DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
       run: |
-        python bot.py
+        python main.py
