@@ -23,4 +23,4 @@ async def on_ready():
     print(f"Bot online as {bot.user}")
 
 # Start bot
-bot.run(os.getenv("BOT_TOKEN"))
+bot.run(os.getenv("DISCORD_TOKEN"))
