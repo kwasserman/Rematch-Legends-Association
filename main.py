@@ -11,7 +11,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 # Create bot instance
-bot = commands.Bot(command_prefix="/", intents=intents)
+bot = commands.Bot(command_prefix="!", intents=intents)
 
 # Load all command files from /src/commands
 for filename in os.listdir("./src/commands"):
