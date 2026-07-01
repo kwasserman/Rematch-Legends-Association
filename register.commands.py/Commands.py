@@ -18,4 +18,4 @@ class SyncBot(discord.Client):
 intents = discord.Intents.default()
 client = SyncBot(intents=intents)
 
-client.run(os.getenv("BOT_TOKEN"))
+client.run(os.getenv("DISCORD_TOKEN"))

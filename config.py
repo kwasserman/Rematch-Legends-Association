@@ -11,4 +11,4 @@ load_dotenv()
 
 
 # Load the bot token from the .env file
-TOKEN= os.getenv('DISCORD_BOT_TOKEN')
+TOKEN= os.getenv('DISCORD_TOKEN')

@@ -79,4 +79,4 @@ class AnnouncementCog(commands.Cog):
 
 # cogs/announcement_cod.py
 async def setup(bot):
-    await bot.add_cog(AnnouncementCog(bot)) 
+    await bot.add_cog(AnnouncementCog(bot))
